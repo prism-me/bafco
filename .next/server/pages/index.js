@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\components\\features\\count-down.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\components\\features\\count-down.jsx";
 
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 // countdown renderer for comming soon
@@ -254,7 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_modal__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! js-cookie */ "js-cookie");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\components\\features\\modals\\newsletter-modal.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\components\\features\\modals\\newsletter-modal.jsx";
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 
 
@@ -561,7 +561,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-load-image-component */ "react-lazy-load-image-component");
 /* harmony import */ var react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_features_alink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/components/features/alink */ "./components/features/alink.jsx");
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\components\\features\\posts\\post-four.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\components\\features\\posts\\post-four.jsx";
 
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 
@@ -727,7 +727,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_compare__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ~/store/compare */ "./store/compare.js");
 /* harmony import */ var _store_demo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ~/store/demo */ "./store/demo.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ~/utils */ "./utils/index.js");
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\components\\features\\products\\product-twelve.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\components\\features\\products\\product-twelve.jsx";
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -1203,7 +1203,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_features_owl_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/components/features/owl-carousel */ "./components/features/owl-carousel.jsx");
 /* harmony import */ var _components_features_posts_post_four__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ~/components/features/posts/post-four */ "./components/features/posts/post-four.jsx");
 /* harmony import */ var _utils_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ~/utils/data */ "./utils/data.js");
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\components\\partials\\home\\blog-collection.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\components\\partials\\home\\blog-collection.jsx";
 
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 
@@ -1343,7 +1343,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_features_products_product_twelve__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/components/features/products/product-twelve */ "./components/features/products/product-twelve.jsx");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ~/utils */ "./utils/index.js");
 /* harmony import */ var _utils_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ~/utils/data */ "./utils/data.js");
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\components\\partials\\home\\special-collection.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\components\\partials\\home\\special-collection.jsx";
 
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 
@@ -1588,7 +1588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_tabs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_tabs__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_features_products_product_twelve__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/components/features/products/product-twelve */ "./components/features/products/product-twelve.jsx");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/utils */ "./utils/index.js");
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\components\\partials\\home\\top-collection.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\components\\partials\\home\\top-collection.jsx";
 
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 
@@ -1969,7 +1969,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _server_queries__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ~/server/queries */ "./server/queries.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ~/utils */ "./utils/index.js");
 /* harmony import */ var _utils_data__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ~/utils/data */ "./utils/data.js");
-var _jsxFileName = "C:\\Users\\devte\\OneDrive\\Documents\\Prism\\bafco\\pages\\index.jsx";
+var _jsxFileName = "E:\\BAFCO\\bafco\\pages\\index.jsx";
 
 var __jsx = (react__WEBPACK_IMPORTED_MODULE_0___default().createElement);
 
