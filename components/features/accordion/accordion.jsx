@@ -17,6 +17,8 @@ function Accordion ( props ) {
         }
     }
 
+    // i am accordian
+    // check it again
     return (
         type === "normal" ?
             <div className={ `accordion  ${adClass}` } onClick={ onHandleClick } >
