@@ -65,7 +65,7 @@
 /*-------------------- 6.   SPACING & HELPERS    --------------------*/
 /*-------------------- 7.   FONT ICONS   --------------------*/
 
-/*-------------------- 8.   HomePage    --------------------*/   
+/*-------------------- 8.   HomePage    --------------------*/
 
 /*-------------------- END of TABLE OF CONTENTS  ---------- */
 
@@ -76,7 +76,14 @@
 @import 'mixins/buttons';
 
 @import 'config/variables';
-$font-family: 'Jost';
+
+@font-face {
+    font-family: 'Helvetica Neue LT Std';
+    font-weight: 900;
+    src: local('Helvetica Neue LT Std'), url("../fonts/HelveticaNeueLTStd-Md.otf") format('opentype');
+}
+
+$font-family: 'Helvetica Neue LT Std';
 
 /*-------------------- 1.General Styles ---------- */
 @import 'base/base';

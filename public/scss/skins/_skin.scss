@@ -188,8 +188,8 @@ a:focus {
 }
 
 .btn-outline-gray {
-    @include button-outline-variant(#333333, #fff,
-    $primary-color, #959595,
+    @include button-outline-variant(#000, #fff,
+    $primary-color, #000,
     $primary-color,
     none, none);
 }

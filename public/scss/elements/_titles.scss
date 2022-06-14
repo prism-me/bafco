@@ -33,6 +33,7 @@
 
 		.title {
 			margin-bottom: 1.5rem;
+			font-size: 4rem;
 		}
 
 		.title-lg {
@@ -83,7 +84,7 @@
 
 @include mq('md') {
 	.title {
-		font-size: 2.4rem;
+		font-size: 4rem;
 	}
 
 	.title-lg {
@@ -99,7 +100,7 @@
 			text-align: left;
 		}
 	}
-	
+
 	.heading-right {
 		margin-top: 0;
 		margin-left: auto;

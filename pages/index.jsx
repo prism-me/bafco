@@ -17,23 +17,47 @@ import { attrFilter } from '~/utils';
 
 import { homeData, introSlider, brandSlider, fadeInUpShorter, fadeInLeftShorter, fadeInRightShorter, fadeIn } from '~/utils/data';
 
-function Home () {
-    const { data, loading, error } = useQuery( GET_HOME_DATA );
+function Home() {
+    const { data, loading, error } = useQuery(GET_HOME_DATA);
     const products = data && data.homeData.products;
-    const topProducts = attrFilter( data && data.homeData.products, 'top' );
+    const topProducts = attrFilter(data && data.homeData.products, 'top');
     const posts = data && data.homeData.posts;
 
-    if ( error ) {
+    function openVideoModal(e) {
+        e.preventDefault();
+        props.showVideo();
+    }
+
+    if (error) {
         return <div></div>
     }
+
 
     return (
         <div className="main home-page skeleton-body">
             <div className="intro-slider-container">
-                <OwlCarousel adClass="owl-simple owl-light owl-nav-inside" options={ introSlider }>
-                    <div className="intro-slide slide1" style={ { backgroundColor: '#EDF2F0', backgroundImage: 'url(images/home/sliders/slide-1-1.png)' } }>
+                <div className="intro-slide slide1" style={{ backgroundColor: '#EDF2F0', backgroundImage: 'url(images/home/sliders/home-background-banner.jpg)' }}>
+                    <div className="container intro-content">
+                        <Reveal keyframes={fadeInUpShorter} delay="100%" duration={1000}>
+                            <>
+                                <h3 className="intro-subtitle">Work Better. Live Healthier.</h3>
+                                <h1 className="intro-title">Site Stand <br />Desks
+                                    {/* <br /><span className="text-primary"><sup>$</sup>49,99</span> */}
+                                </h1>
+
+                                <ALink href="#" className="btn btn-dark btn-outline-darker">
+                                    <span>Design My Desk</span>
+                                    <i className="icon-long-arrow-right"></i>
+                                </ALink>
+                            </>
+                        </Reveal>
+                        {/* <img src="images/home/sliders/slide-1-3.png" className="position-absolute" alt="slide" /> */}
+                    </div>
+                </div>
+                {/* <OwlCarousel adClass="owl-simple owl-light owl-nav-inside" options={introSlider}>
+                    <div className="intro-slide slide1" style={{ backgroundColor: '#EDF2F0', backgroundImage: 'url(images/home/sliders/slide-1-1.png)' }}>
                         <div className="container intro-content">
-                            <Reveal keyframes={ fadeInUpShorter } delay="100%" duration={ 1000 }>
+                            <Reveal keyframes={fadeInUpShorter} delay="100%" duration={1000}>
                                 <>
                                     <h3 className="intro-subtitle">Deals and Promotions</h3>
                                     <h1 className="intro-title">Wooden <br />Sideboard Table <br /><span className="text-primary"><sup>$</sup>49,99</span></h1>
@@ -47,9 +71,9 @@ function Home () {
                             <img src="images/home/sliders/slide-1-3.png" className="position-absolute" alt="slide" />
                         </div>
                     </div>
-                    <div className="intro-slide" style={ { backgroundImage: 'url(images/home/sliders/slide-2.jpg)' } }>
+                    <div className="intro-slide" style={{ backgroundImage: 'url(images/home/sliders/slide-2.jpg)' }}>
                         <div className="container intro-content text-right">
-                            <Reveal keyframes={ fadeInUpShorter } delay="100%" duration={ 1000 }>
+                            <Reveal keyframes={fadeInUpShorter} delay="100%" duration={1000}>
                                 <div className="d-inline-block text-left">
                                     <h3 className="intro-subtitle">Bedroom Furniture</h3>
                                     <h1 className="intro-title">Find Comfort <br />That Suits You.</h1>
@@ -63,16 +87,16 @@ function Home () {
                         </div>
                     </div>
 
-                    <div className="intro-slide slide3" style={ { backgroundColor: '#EDF2F0', backgroundImage: 'url(images/home/sliders/slide-3-1.png)' } }>
+                    <div className="intro-slide slide3" style={{ backgroundColor: '#EDF2F0', backgroundImage: 'url(images/home/sliders/slide-3-1.png)' }}>
                         <div className="container intro-content">
-                            <Reveal keyframes={ fadeInUpShorter } delay="100%" duration={ 1000 }>
+                            <Reveal keyframes={fadeInUpShorter} delay="100%" duration={1000}>
                                 <>
                                     <h3 className="intro-subtitle">Baskets & Storage</h3>
                                     <h1 className="intro-title">
                                         Laundary Basket<br />
                                         <span className="text-primary">
                                             <sup className="text-grey font-weight-light">from</sup><sup>$</sup>9,99
-                                    </span>
+                                        </span>
                                     </h1>
 
                                     <ALink href="/shop/sidebar/list" className="btn btn-dark btn-outline-darker">
@@ -83,21 +107,90 @@ function Home () {
                             </Reveal>
                         </div>
                     </div>
-                </OwlCarousel>
+                </OwlCarousel> */}
             </div>
-            <Reveal keyframes={ fadeIn } delay="100%" duration={ 500 } triggerOnce>
-                <OwlCarousel adClass="brands-border owl-simple brand-carousel cols-xl-7 cols-lg-5 cols-md-4 cols-sm-3 cols-2" options={ brandSlider }>
+            {/* <Reveal keyframes={fadeIn} delay="100%" duration={500} triggerOnce>
+                <OwlCarousel adClass="brands-border owl-simple brand-carousel cols-xl-7 cols-lg-5 cols-md-4 cols-sm-3 cols-2" options={brandSlider}>
                     {
-                        homeData.brands.map( ( brand, index ) => {
+                        homeData.brands.map((brand, index) => {
                             return (
-                                <ALink href="#" className="brand mr-0" key={ index } >
-                                    <img src={ brand.image } alt="brand" width={ brand.width } height={ brand.height } />
+                                <ALink href="#" className="brand mr-0" key={index} >
+                                    <img src={brand.image} alt="brand" width={brand.width} height={brand.height} />
                                 </ALink>
                             )
-                        } )
+                        })
                     }
                 </OwlCarousel>
-            </Reveal>
+            </Reveal> */}
+
+            <div className="icon-boxes-container icon-boxes-separator">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-6 col-lg-4">
+                            <Reveal keyframes={fadeInRightShorter} delay={200} duration={1000} triggerOnce>
+                                <div className="icon-box icon-box-side">
+                                    <span className="icon-box-icon">
+                                        <i className="icon-phone"></i>
+                                    </span>
+                                    <div className="icon-box-content">
+                                        <h3 className="icon-box-title">Give Us A Call</h3>
+
+                                        <p>+971 800 (22326)</p>
+                                    </div>
+                                </div>
+                            </Reveal>
+                        </div>
+
+                        <div className="col-sm-6 col-lg-4">
+                            <Reveal keyframes={fadeInRightShorter} delay={200} duration={1000} triggerOnce>
+                                <div className="icon-box icon-box-side">
+                                    <span className="icon-box-icon">
+                                        <i className="icon-whatsapp"></i>
+                                    </span>
+
+                                    <div className="icon-box-content">
+                                        <h3 className="icon-box-title">Whatsapp</h3>
+
+                                        <p>+971 800 (22326)</p>
+                                    </div>
+                                </div>
+                            </Reveal>
+                        </div>
+
+                        <div className="col-sm-6 col-lg-4">
+                            <Reveal keyframes={fadeInRightShorter} delay={200} duration={1000} triggerOnce>
+                                <div className="icon-box icon-box-side">
+                                    <span className="icon-box-icon">
+                                        <i className="icon-map-marker"></i>
+                                    </span>
+
+                                    <div className="icon-box-content">
+                                        <h3 className="icon-box-title">Locations</h3>
+
+                                        <p>Visit a showroom near you.</p>
+                                    </div>
+                                </div>
+                            </Reveal>
+                        </div>
+
+                        {/* <div className="col-sm-6 col-lg-3">
+                            <Reveal keyframes={fadeInLeftShorter} delay={200} duration={1000} triggerOnce>
+                                <div className="icon-box icon-box-side">
+                                    <span className="icon-box-icon">
+                                        <i className="icon-life-ring"></i>
+                                    </span>
+
+                                    <div className="icon-box-content">
+                                        <h3 className="icon-box-title">We Support</h3>
+
+                                        <p>24/7 amazing services</p>
+                                    </div>
+                                </div>
+                            </Reveal>
+                        </div> */}
+                    </div>
+                </div>
+            </div>
 
             <div className="mb-3 mb-lg-5"></div>
 
@@ -105,55 +198,55 @@ function Home () {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6 col-lg-5">
-                            <Reveal keyframes={ fadeInLeftShorter } delay={ 150 } duration={ 1000 } triggerOnce>
+                            <Reveal keyframes={fadeInLeftShorter} delay={150} duration={1000} triggerOnce>
                                 <div className="banner banner-large banner-overlay banner-overlay-light banner-lg banner-1 lazy-media">
                                     <div className="lazy-overlay"></div>
 
                                     <LazyLoadImage
                                         alt="banner"
-                                        src="images/home/banners/banner-1.jpg"
-                                        threshold={ 200 }
+                                        src="images/home/banners/workstation-collection.png"
+                                        threshold={200}
                                         width="100%"
                                         height="auto"
                                         effect="blur"
                                     />
 
                                     <div className="banner-content banner-content-top">
-                                        <h4 className="banner-subtitle">Clearence</h4>
-                                        <h3 className="banner-title">Coffee Tables</h3>
-                                        <div className="banner-text">from $19.99</div>
-                                        <ALink href="/shop/sidebar/list" className="btn btn-outline-gray banner-link">Shop Now<i className="icon-long-arrow-right"></i></ALink>
+                                        <h4 className="banner-subtitle">Clearance</h4>
+                                        <h3 className="banner-title">Workstation <br /> Collection</h3>
+                                        <div className="banner-text">from Dhs.200</div>
+                                        <ALink href="#" className="btn btn-outline-gray banner-link">Discover Now<i className="icon-long-arrow-right"></i></ALink>
                                     </div>
                                 </div>
                             </Reveal>
                         </div>
 
                         <div className="col-sm-6 col-lg-3">
-                            <Reveal keyframes={ fadeIn } delay={ 150 } duration={ 1000 } triggerOnce>
+                            <Reveal keyframes={fadeIn} delay={150} duration={1000} triggerOnce>
                                 <div className="banner banner-overlay banner-lg banner-2 lazy-media">
                                     <div className="lazy-overlay"></div>
 
                                     <LazyLoadImage
                                         alt="banner"
-                                        src="images/home/banners/banner-2.jpg"
-                                        threshold={ 200 }
+                                        src="images/home/banners/chair-collections.png"
+                                        threshold={200}
                                         height="auto"
                                         width="100%"
                                         effect="blur"
                                     />
 
                                     <div className="banner-content banner-content-top">
-                                        <h4 className="banner-subtitle text-grey">On Sale</h4>
-                                        <h3 className="banner-title text-white">Kitchenware</h3>
-                                        <div className="banner-text text-white">from $39.99</div>
-                                        <ALink href="/shop/sidebar/list" className="btn btn-outline-white banner-link">Discover Now<i className="icon-long-arrow-right"></i></ALink>
+                                        <h4 className="banner-subtitle text-grey">Freedom</h4>
+                                        <h3 className="banner-title text-white">Chair Collections </h3>
+                                        {/* <div className="banner-text text-white">from $39.99</div> */}
+                                        <ALink href="#" className="btn btn-outline-white banner-link">Discover Now<i className="icon-long-arrow-right"></i></ALink>
                                     </div>
                                 </div>
                             </Reveal>
                         </div>
 
                         <div className="col-sm-12 col-md-12 col-lg-4">
-                            <Reveal keyframes={ fadeInRightShorter } delay={ 150 } duration={ 1000 } triggerOnce>
+                            <Reveal keyframes={fadeInRightShorter} delay={150} duration={1000} triggerOnce>
                                 <div className="row">
                                     <div className="col-lg-12 col-md-6 col-sm-6">
                                         <div className="banner banner-3 banner-overlay lazy-media">
@@ -162,16 +255,16 @@ function Home () {
                                             <LazyLoadImage
                                                 alt="banner"
                                                 src="images/home/banners/banner-3.jpg"
-                                                threshold={ 200 }
+                                                threshold={200}
                                                 height="auto"
                                                 width="100%"
                                                 effect="blur"
                                             />
 
                                             <div className="banner-content banner-content-top">
-                                                <h4 className="banner-subtitle">New Arrivals</h4>
-                                                <h3 className="banner-title">Home Decor</h3>
-                                                <ALink href="/shop/sidebar/list" className="btn btn-outline-gray banner-link">Discover Now<i className="icon-long-arrow-right"></i></ALink>
+                                                <h4 className="banner-subtitle">Midas</h4>
+                                                <h3 className="banner-title">Desk Collections</h3>
+                                                <ALink href="#" className="btn btn-outline-gray banner-link">Discover Now<i className="icon-long-arrow-right"></i></ALink>
                                             </div>
                                         </div>
                                     </div>
@@ -183,17 +276,17 @@ function Home () {
                                             <LazyLoadImage
                                                 alt="banner"
                                                 src="images/home/banners/banner-4.jpg"
-                                                threshold={ 200 }
+                                                threshold={200}
                                                 width="100%"
                                                 height="auto"
                                                 effect="blur"
                                             />
 
                                             <div className="banner-content banner-content-top">
-                                                <h4 className="banner-subtitle">On Sale</h4>
-                                                <h3 className="banner-title">Collection Chairs</h3>
-                                                <div className="banner-text">up to 30% off</div>
-                                                <ALink href="/shop/sidebar/list" className="btn btn-outline-gray banner-link">Shop Now<i className="icon-long-arrow-right"></i></ALink>
+                                                <h4 className="banner-subtitle">Enzo Plus</h4>
+                                                <h3 className="banner-title">Sofa Collections</h3>
+                                                {/* <div className="banner-text">up to 30% off</div> */}
+                                                <ALink href="#" className="btn btn-outline-gray banner-link">Discover Now<i className="icon-long-arrow-right"></i></ALink>
                                             </div>
                                         </div>
                                     </div>
@@ -206,34 +299,38 @@ function Home () {
 
             <div className="mb-3"></div>
 
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                <SpecialCollection products={ products } loading={ loading } />
+            <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
+                <TopCollection products={topProducts} loading={loading} />
             </Reveal>
-            <div className="bg-light deal-container pt-5 pb-3 mb-5">
+
+            {/* <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
+                <SpecialCollection products={products} loading={loading} />
+            </Reveal> */}
+            <div className="deal-container pt-5 pb-3 mb-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-9">
                             <div className="deal">
                                 <div className="deal-content">
-                                    <Reveal keyframes={ fadeInLeftShorter } delay={ 200 } duration={ 1000 } triggerOnce>
+                                    <Reveal keyframes={fadeInLeftShorter} delay={200} duration={1000} triggerOnce>
                                         <>
                                             <h4>Limited Quantities</h4>
                                             <h2>Deal of the Day</h2>
 
                                             <h3 className="product-title">
-                                                <ALink href="#">POÄNG</ALink>
+                                                <ALink href="#">Check Out</ALink>
                                             </h3>
 
                                             <div className="product-price">
-                                                <span className="new-price">$149.00</span>
-                                                <span className="old-price">Was $240.00</span>
+                                                <span className="new-price">Dhs. 5000</span>
+                                                <span className="old-price">Was Dhs.7000</span>
                                             </div>
 
                                             <div className="deal-countdown">
-                                                <Countdown date={ `2022-02-01T01:02:03` } renderer={ rendererThree } />
+                                                <Countdown date={`2022-02-01T01:02:03`} renderer={rendererThree} />
                                             </div>
 
-                                            <ALink href="/shop/sidebar/list" className="btn btn-primary">
+                                            <ALink href="#" className="btn btn-primary">
                                                 <span>Shop Now</span><i className="icon-long-arrow-right"></i>
                                             </ALink>
                                         </>
@@ -241,17 +338,17 @@ function Home () {
                                 </div>
 
                                 <div className="deal-image position-relative">
-                                    <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                                        <ALink href="/shop/sidebar/list">
+                                    <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
+                                        <ALink href="#">
                                             <div className="lazy-overlay bg-white"></div>
 
                                             <LazyLoadImage
                                                 alt="deal-banner"
-                                                src="images/home/deal/deal-1.png"
+                                                src="images/home/deal/dealoftheday.png"
                                                 threshold="300"
                                                 effect="blur"
                                                 width="100%"
-                                                height={ 460 }
+                                                height={460}
                                             />
                                         </ALink>
                                     </Reveal>
@@ -285,86 +382,36 @@ function Home () {
                     </div>
                 </div>
             </div>
+
             <div className="mb-6"></div>
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                <TopCollection products={ topProducts } loading={ loading } />
-            </Reveal>
-            <BlogCollection posts={ posts } loading={ loading }></BlogCollection>
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                <div className="icon-boxes-container">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-6 col-lg-3">
-                                <div className="icon-box icon-box-side">
-                                    <span className="icon-box-icon text-dark">
-                                        <i className="icon-rocket"></i>
-                                    </span>
-                                    <div className="icon-box-content">
-                                        <h3 className="icon-box-title">Free Shipping</h3>
 
-                                        <p>orders $50 or more</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-sm-6 col-lg-3">
-                                <div className="icon-box icon-box-side">
-                                    <span className="icon-box-icon text-dark">
-                                        <i className="icon-rotate-left"></i>
-                                    </span>
-
-                                    <div className="icon-box-content">
-                                        <h3 className="icon-box-title">Free Returns</h3>
-
-                                        <p>within 30 days</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-sm-6 col-lg-3">
-                                <div className="icon-box icon-box-side">
-                                    <span className="icon-box-icon text-dark">
-                                        <i className="icon-info-circle"></i>
-                                    </span>
-
-                                    <div className="icon-box-content">
-                                        <h3 className="icon-box-title">Get 20% Off 1 Item</h3>
-
-                                        <p>When you sign up</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-sm-6 col-lg-3">
-                                <div className="icon-box icon-box-side">
-                                    <span className="icon-box-icon text-dark">
-                                        <i className="icon-life-ring"></i>
-                                    </span>
-
-                                    <div className="icon-box-content">
-                                        <h3 className="icon-box-title">We Support</h3>
-
-                                        <p>24/7 amazing services</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div className="video-banner video-banner-bg bg-image text-center" style={{ backgroundImage: 'url(images/home/unsplash_aWf7mjwwJJo.png)' }}>
+                <div className="container">
+                    <Reveal keyframes={fadeInUpShorter} delay={200} duration={1000} triggerOnce>
+                        <>
+                            <h3 className="video-banner-title h1 text-white">
+                                {/* <span>New Collection</span> */}
+                                <strong>Visit Our Showroom</strong>
+                            </h3>
+                            <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" className="btn-video btn-iframe" onClick={openVideoModal}><i className="icon-play"></i></a>
+                        </>
+                    </Reveal>
                 </div>
-            </Reveal>
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
+            </div>
+
+            <div className="mb-6"></div>
+
+            <BlogCollection posts={posts} loading={loading}></BlogCollection>
+            <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
                 <div
                     className="footer-newsletter bg-image"
-                    style={ { backgroundImage: 'url(images/backgrounds/bg-2.jpg)' } }
+                    style={{ backgroundImage: 'url(images/backgrounds/Rectangle-9.png)' }}
                 >
                     <div className="container">
                         <div className="heading text-center">
-                            <h3 className="title">Get The Latest Deals</h3>
+                            <h3 className="title">Keep in Touch</h3>
 
-                            <p className="title-desc">
-                                and receive&nbsp;
-                            <span>$20 coupon</span> for first shopping
-                        </p>
+                            <p className="title-desc">Join Our Newsletter</p>
                         </div>
 
                         <div className="row">
@@ -401,4 +448,4 @@ function Home () {
     )
 }
 
-export default withApollo( { ssr: typeof window == 'undefined' } )( Home );
+export default withApollo({ ssr: typeof window == 'undefined' })(Home);

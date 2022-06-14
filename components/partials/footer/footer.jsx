@@ -3,94 +3,116 @@ import React, { useState, useEffect } from 'react';
 
 import ALink from '~/components/features/alink';
 
-function Footer () {
-    const router = useRouter( "" );
-    const [ isBottomSticky, setIsBottomSticky ] = useState( false );
-    const [ containerClass, setContainerClass ] = useState( 'container' );
+function Footer() {
+    const router = useRouter("");
+    const [isBottomSticky, setIsBottomSticky] = useState(false);
+    const [containerClass, setContainerClass] = useState('container');
 
-    useEffect( () => {
+    useEffect(() => {
         handleBottomSticky();
-        setContainerClass( router.asPath.includes( 'fullwidth' ) ? 'container-fluid' : 'container' );
-    }, [ router.asPath ] );
+        setContainerClass(router.asPath.includes('fullwidth') ? 'container-fluid' : 'container');
+    }, [router.asPath]);
 
-    useEffect( () => {
-        window.addEventListener( 'resize', handleBottomSticky, { passive: true } );
+    useEffect(() => {
+        window.addEventListener('resize', handleBottomSticky, { passive: true });
         return () => {
-            window.removeEventListener( 'resize', handleBottomSticky );
+            window.removeEventListener('resize', handleBottomSticky);
         }
-    }, [] )
+    }, [])
 
-    function handleBottomSticky () {
-        setIsBottomSticky( router.pathname.includes( 'product/default' ) && ( window.innerWidth > 991 ) );
+    function handleBottomSticky() {
+        setIsBottomSticky(router.pathname.includes('product/default') && (window.innerWidth > 991));
     }
 
     return (
         <footer className="footer footer-2">
             <div className="footer-middle">
-                <div className={ containerClass }>
+                <div className={containerClass}>
                     <div className="row">
-                        <div className="col-sm-12 col-lg-6">
+                        <div className="col-sm-12 col-lg-3">
                             <div className="widget widget-about">
-                                <img src="images/logo.png" className="footer-logo" alt="Footer Logo" width="105" height="25" />
-                                <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. </p>
+                                <img src="images/bafco-logo.png" className="footer-logo" alt="Footer Logo" width="150" />
+                                <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
 
                                 <div className="widget-about-info">
-                                    <div className="row">
-                                        <div className="col-sm-6 col-md-4">
-                                            <span className="widget-about-title">Got Question? Call us 24/7</span>
-                                            <ALink href="tel:123456789">+0123 456 789</ALink>
-                                        </div>
-                                        <div className="col-sm-6 col-md-8">
-                                            <span className="widget-about-title">Payment Method</span>
-                                            <figure className="footer-payments">
-                                                <img src="images/payments.png" alt="Payment methods" width="272" height="20" />
-                                            </figure>
-                                        </div>
-                                    </div>
+                                    {/* <div className="social-icons social-icons-color"> */}
+                                    <span className="widget-about-title">Social Media</span>
+                                    <ALink href="#" className="social-icon social-instagram" rel="noopener noreferrer" title="Instagram"><i className="icon-instagram"></i></ALink>
+                                    <ALink href="#" className="social-icon social-facebook" rel="noopener noreferrer" title="Facebook"><i className="icon-facebook-f"></i></ALink>
+                                    <ALink href="#" className="social-icon social-linkedin" rel="noopener noreferrer" title="linkedin"><i className="icon-linkedin"></i></ALink>
+                                    <ALink href="#" className="social-icon social-twitter" rel="noopener noreferrer" title="Twitter"><i className="icon-twitter"></i></ALink>
+                                    {/* </div> */}
+
+                                    <span className="widget-about-title">Payment Method</span>
+                                    <figure className="footer-payments">
+                                        <img src="images/payments.png" alt="Payment methods" width="272" height="20" />
+                                    </figure>
                                 </div>
                             </div>
                         </div>
-
                         <div className="col-sm-4 col-lg-2">
                             <div className="widget">
-                                <h4 className="widget-title">Information</h4>
+                                <h4 className="widget-title">QUICK LINKS</h4>
 
                                 <ul className="widget-list">
-                                    <li><ALink href="/pages/about">About Molla</ALink></li>
-                                    <li><ALink href="/pages/about">How to shop on Molla</ALink></li>
-                                    <li><ALink href="/pages/faq">FAQ</ALink></li>
-                                    <li><ALink href="/pages/contact">Contact us</ALink></li>
-                                    <li><ALink href="/pages/login">Log in</ALink></li>
+                                    <li><ALink href="#">Space Planning Services</ALink></li>
+                                    <li><ALink href="#">Delivery & Installation</ALink></li>
+                                    <li><ALink href="#">Fabric & Finishes</ALink></li>
+                                    <li><ALink href="#">Warranty</ALink></li>
+                                    <li><ALink href="#">Project References</ALink></li>
+                                    <li><ALink href="#">Testimonials</ALink></li>
+                                    <li><ALink href="#">BLOGS/ Insights</ALink></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4 col-lg-1">
+                            <div className="widget">
+                                <h4 className="widget-title">SHOP</h4>
+
+                                <ul className="widget-list">
+                                    <li><ALink href="#">Chairs</ALink></li>
+                                    <li><ALink href="#">Desks</ALink></li>
+                                    <li><ALink href="#">Collaborative</ALink></li>
+                                    <li><ALink href="#">Storages</ALink></li>
+                                    <li><ALink href="#">Accessories</ALink></li>
+                                    <li><ALink href="#">Materials</ALink></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="col-sm-4 col-lg-2">
                             <div className="widget">
-                                <h4 className="widget-title">Customer Service</h4>
+                                <h4 className="widget-title">MY ACCOUNT</h4>
 
                                 <ul className="widget-list">
-                                    <li><ALink href="#">Payment Methods</ALink></li>
-                                    <li><ALink href="#">Money-back guarantee!</ALink></li>
-                                    <li><ALink href="#">Returns</ALink></li>
-                                    <li><ALink href="#">Shipping</ALink></li>
-                                    <li><ALink href="#">Terms and conditions</ALink></li>
-                                    <li><ALink href="#">Privacy Policy</ALink></li>
+                                    <li><ALink href="#">My account</ALink></li>
+                                    <li><ALink href="#">Login</ALink></li>
+                                    <li><ALink href="#">Order History</ALink></li>
+                                    <li><ALink href="#">Terms & Condition</ALink></li>
+                                    <li><ALink href="#">FAQs</ALink></li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div className="col-sm-4 col-lg-2">
+                        <div className="col-sm-4 col-lg-1">
                             <div className="widget">
-                                <h4 className="widget-title">My Account</h4>
+                                <h4 className="widget-title">BAFCO</h4>
 
                                 <ul className="widget-list">
-                                    <li><ALink href="#">Sign In</ALink></li>
-                                    <li><ALink href="/shop/cart">View Cart</ALink></li>
-                                    <li><ALink href="/shop/wishlist">My Wishlist</ALink></li>
-                                    <li><ALink href="#">Track My Order</ALink></li>
-                                    <li><ALink href="#">Help</ALink></li>
+                                    <li><ALink href="#">About Us</ALink></li>
+                                    <li><ALink href="#">Services</ALink></li>
+                                    <li><ALink href="#">Innovations</ALink></li>
+                                    <li><ALink href="#">Resources</ALink></li>
                                 </ul>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-12 col-lg-3">
+                            <div className="widget">
+                                <h4 className="widget-title">Visit our Showroom</h4>
+                                <p>Dubai
+                                    BAFCO Office & Showroom Ground Floor, Al Manara Building (near Al Safa Metro Station) Sheikh Zayed Road, Dubai, UAE</p>
                             </div>
                         </div>
                     </div>
@@ -98,21 +120,23 @@ function Footer () {
             </div>
 
             <div className="footer-bottom">
-                <div className={ containerClass }>
-                    <p className="footer-copyright">Copyright © { ( new Date() ).getFullYear() } Molla Store. All Rights Reserved.</p>
+                <div className={containerClass}>
+                    <p className="footer-copyright">Copyright © {(new Date()).getFullYear()} Bafco Store. All Rights Reserved.</p>
                     <ul className="footer-menu">
                         <li><ALink href="#">Terms Of Use</ALink></li>
                         <li><ALink href="#">Privacy Policy</ALink></li>
+                        <li><ALink href="#">Shipping Policy</ALink></li>
                     </ul>
 
                     <div className="social-icons social-icons-color">
-                        <span className="social-label">Social Media</span>
+                        <p>Designed and Managed by <ALink href="https://www.prism-me.com/">Prism</ALink></p>
+                        {/* <span className="social-label">Social Media</span>
 
                         <ALink href="#" className="social-icon social-facebook" rel="noopener noreferrer" title="Facebook"><i className="icon-facebook-f"></i></ALink>
                         <ALink href="#" className="social-icon social-twitter" rel="noopener noreferrer" title="Twitter"><i className="icon-twitter"></i></ALink>
                         <ALink href="#" className="social-icon social-instagram" rel="noopener noreferrer" title="Instagram"><i className="icon-instagram"></i></ALink>
                         <ALink href="#" className="social-icon social-youtube" rel="noopener noreferrer" title="Youtube"><i className="icon-youtube"></i></ALink>
-                        <ALink href="#" className="social-icon social-pinterest" rel="noopener noreferrer" title="Pinterest"><i className="icon-pinterest"></i></ALink>
+                        <ALink href="#" className="social-icon social-pinterest" rel="noopener noreferrer" title="Pinterest"><i className="icon-pinterest"></i></ALink> */}
                     </div>
                 </div>
             </div>
@@ -125,4 +149,4 @@ function Footer () {
     );
 }
 
-export default React.memo( Footer );
+export default React.memo(Footer);

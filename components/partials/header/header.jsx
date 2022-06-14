@@ -24,7 +24,7 @@ function Header() {
 
     return (
         <header className="header header-2 header-intro-clearance">
-            <div className="header-top">
+            {/* <div className="header-top">
                 <div className={containerClass}>
                     <div className="header-left overflow-hidden mr-3 mr-sm-0">
                         <div className="welcome-msg d-flex flex-nowrap">
@@ -66,7 +66,7 @@ function Header() {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="header-middle">
                 <div className={containerClass}>
@@ -123,8 +123,8 @@ function Header() {
                                                     <ALink href="#">USD</ALink>
                                                     <div className="header-menu">
                                                         <ul>
-                                                            <li><ALink href="#">Eur</ALink></li>
-                                                            <li><ALink href="#">Usd</ALink></li>
+                                                            <li><ALink href="#">USD</ALink></li>
+                                                            <li><ALink href="#">AED</ALink></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -135,13 +135,13 @@ function Header() {
                                                     <div className="header-menu">
                                                         <ul>
                                                             <li><ALink href="#">English</ALink></li>
-                                                            <li><ALink href="#">French</ALink></li>
-                                                            <li><ALink href="#">Spanish</ALink></li>
+                                                            <li><ALink href="#">Arabic</ALink></li>
+                                                            {/* <li><ALink href="#">Spanish</ALink></li> */}
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <LoginModal />
+                                            {/* <LoginModal /> */}
                                         </ul>
                                     </li>
                                 </ul>

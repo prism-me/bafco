@@ -125,7 +125,7 @@ function HeaderSearch () {
                 <div className="header-search-wrapper search-wrapper-wide">
                     <label htmlFor="q" className="sr-only" value={ searchTerm }
                         required>Search</label>
-                    <input type="text" onChange={ onSearchChange } value={ searchTerm } className="form-control" name="q" placeholder="Search product ..." required />
+                    <input type="text" onChange={ onSearchChange } value={ searchTerm } className="form-control" name="q" placeholder="What are you looking for?" required />
                     <button className="btn btn-primary" type="submit"><i className="icon-search"></i></button>
                     <div className="live-search-list" onClick={ goProductPage }>
                         {

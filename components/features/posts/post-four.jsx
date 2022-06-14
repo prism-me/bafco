@@ -37,7 +37,7 @@ function PostFour ( props ) {
                 </h2>
 
                 <div className="entry-content">
-                    <ALink href={ `/blog/single/default/${post.slug}` } className="read-more">Continue Reading</ALink>
+                    <ALink href={ `/blog/single/default/${post.slug}` } className="read-more">Read More</ALink>
                 </div>
             </div>
         </article >

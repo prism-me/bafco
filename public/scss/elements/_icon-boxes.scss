@@ -80,7 +80,7 @@
 
 /* Icon Boxes */
 .icon-boxes-container {
-	background-color: #f7f7f7;
+	background-color: #000;
 	padding-top: 2.8rem;
 	padding-bottom: 2.8rem;
 	margin-bottom: 0;
@@ -106,6 +106,7 @@
 
 	p {
 		margin-bottom: 0;
+		color: #fff;
 	}
 
 	.icon-box-icon {
@@ -114,6 +115,7 @@
 		min-width: 7rem;
 		text-align: center;
 		margin-bottom: 0;
+		color: #fff;
 	}
 
 	.icon-box-title {
@@ -122,6 +124,7 @@
 		letter-spacing: -.01em;
 		margin-top: .2rem;
 		margin-bottom: 0;
+		color: #fff;
 	}
 }
 
@@ -137,7 +140,7 @@
 
 @include mq('xl') {
 	.icon-boxes-separator {
-		[class*="col-"] + [class*="col-"]:before {
+		[class*="col-"]+[class*="col-"]:before {
 			content: '';
 			display: block;
 			width: .1rem;

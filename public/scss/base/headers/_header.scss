@@ -126,6 +126,7 @@
 	a {
 		display: inline-flex;
 		align-items: center;
+		color: #000000
 	}
 
 	i {
@@ -234,6 +235,7 @@
 			display: flex;
 			align-items: center;
 			white-space: nowrap;
+			color: #000000;
 		}
 	}
 
@@ -900,7 +902,7 @@
 
 .menu .megamenu.demo {
 	width: 70vw;
-	height: 65vh;
+	// height: 65vh;
 	min-width: 95rem;
 	left: 1rem;
 	overflow-x: hidden;
@@ -1017,27 +1019,27 @@
 			}
 		}
 
-		.container::before {
-			position: absolute;
-			content: '';
-			left: 28.5rem;
-			height: 1.5rem;
-			width: .1rem;
-			top: 50%;
-			background-color: #ccc;
-			transform: translateY(-50%);
-		}
+		// .container::before {
+		// 	position: absolute;
+		// 	content: '';
+		// 	left: 28.5rem;
+		// 	height: 1.5rem;
+		// 	width: .1rem;
+		// 	top: 50%;
+		// 	background-color: #ccc;
+		// 	transform: translateY(-50%);
+		// }
 
-		.container::after {
-			position: absolute;
-			content: '';
-			right: 31rem;
-			height: 1.5rem;
-			width: .1rem;
-			top: 50%;
-			background-color: #ccc;
-			transform: translateY(-50%);
-		}
+		// .container::after {
+		// 	position: absolute;
+		// 	content: '';
+		// 	right: 28rem;
+		// 	height: 1.5rem;
+		// 	width: .1rem;
+		// 	top: 50%;
+		// 	background-color: #ccc;
+		// 	transform: translateY(-50%);
+		// }
 	}
 
 	.header-middle {
@@ -1061,6 +1063,10 @@
 		&:after {
 			font-size: 1rem;
 			margin-top: -.6rem;
+		}
+
+		&:hover {
+			color: #EE3124;
 		}
 	}
 
