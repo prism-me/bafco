@@ -475,55 +475,55 @@ export const homeData = {
     brands: [
         {
             "name": "brand",
-            "image": "images/brands/1.png",
+            "image": "images/brands/swarovski.png",
             "width": 100,
             "height": 23
         },
         {
             "name": "brand",
-            "image": "images/brands/2.png",
+            "image": "images/brands/eaglestar.png",
             "width": 101,
             "height": 34
         },
         {
             "name": "brand",
-            "image": "images/brands/3.png",
+            "image": "images/brands/kpm.png",
             "width": 100,
             "height": 30
         },
         {
             "name": "brand",
-            "image": "images/brands/4.png",
+            "image": "images/brands/alfuttaim.png",
             "width": 101,
             "height": 39
         },
         {
             "name": "brand",
-            "image": "images/brands/5.png",
+            "image": "images/brands/eaglestar.png",
             "width": 100,
             "height": 48
         },
         {
             "name": "brand",
-            "image": "images/brands/6.png",
+            "image": "images/brands/swarovski.png",
             "width": 100,
             "height": 23
         },
         {
             "name": "brand",
-            "image": "images/brands/7.png",
+            "image": "images/brands/eaglestar.png",
             "width": 63,
             "height": 32
         },
         {
             "name": "brand",
-            "image": "images/brands/8.png",
+            "image": "images/brands/kpm.png",
             "width": 80,
             "height": 72
         },
         {
             "name": "brand",
-            "image": "images/brands/9.png",
+            "image": "images/brands/alfuttaim.png",
             "width": 100,
             "height": 25
         }
@@ -879,6 +879,12 @@ export const featureSlider4 = {
 export const introSlider = {
     nav: false,
     dots: false,
+    loop: true
+}
+
+export const dealSlider = {
+    nav: false,
+    dots: true,
     loop: true
 }
 

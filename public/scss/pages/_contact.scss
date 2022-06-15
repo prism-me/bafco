@@ -5,18 +5,18 @@
 }
 
 .gm-style .gm-style-iw-c {
-    border-radius: 0 !important;
+	border-radius: 0 !important;
 }
 
 #map address {
 	color: $body-text;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0 0 1rem;
-    font-size: 1.4rem;
-    padding: .5rem .75rem .2rem .75rem;
-    line-height: 1.5;
-    margin: 0;
+	font-style: normal;
+	font-weight: 400;
+	margin: 0 0 1rem;
+	font-size: 1.4rem;
+	padding: .5rem .75rem .2rem .75rem;
+	line-height: 1.5;
+	margin: 0;
 }
 
 .direction-link {
@@ -37,6 +37,13 @@
 	}
 }
 
+ul.contact-list.contact-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 0;
+}
+
 .contact-list {
 	max-width: 270px;
 	list-style: none;
@@ -44,7 +51,7 @@
 
 	li {
 		position: relative;
-		padding-left: 3rem;
+		padding-left: 25px;
 		margin-bottom: 1.4rem;
 	}
 
@@ -75,7 +82,7 @@
 	address,
 	div {
 		font-weight: 300;
-		font-style:normal;
+		font-style: normal;
 		margin-bottom: 0;
 	}
 

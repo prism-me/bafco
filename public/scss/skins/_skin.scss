@@ -4,7 +4,7 @@
 @import '../mixins/buttons';
 @import '../mixins/breakpoints';
 
-$link-color: $primary-color !default;
+$link-color: $primary-color  !default;
 
 ::-moz-selection {
     background-color: $primary-color;
@@ -15,11 +15,11 @@ $link-color: $primary-color !default;
 }
 
 .bg-primary {
-    background-color: $primary-color !important;
+    background-color: $primary-color  !important;
 }
 
 .bg-secondary {
-    background-color: $secondary-color !important;
+    background-color: $secondary-color  !important;
 }
 
 a {
@@ -36,11 +36,11 @@ a:focus {
 }
 
 .text-primary {
-    color: $primary-color !important;
+    color: #008482 !important;
 }
 
 .text-secondary {
-    color: $secondary-color !important;
+    color: $secondary-color  !important;
 }
 
 /* Elements */
@@ -74,11 +74,11 @@ a:focus {
 }
 
 .btn-video {
-    color: $primary-color;
+    color: #008482;
 
     &:hover,
     &:focus {
-        background-color: $secondary-color;
+        background-color: #008482;
     }
 }
 
@@ -135,96 +135,94 @@ a:focus {
 
 .btn-outline {
     @include button-outline-variant($primary-color, $primary-color,
-    transparent, #ebebeb, #ebebeb,
-    0 5px 10px rgba(0, 0, 0, .05), 0 5px 10px rgba(0, 0, 0, .15));
+        transparent, #ebebeb, #ebebeb,
+        0 5px 10px rgba(0, 0, 0, .05), 0 5px 10px rgba(0, 0, 0, .15));
 }
 
 .btn-outline-primary {
     @include button-outline-variant($primary-color, $primary-color,
-    transparent, $primary-color,
-    #ebebeb,
-    none, 0 5px 10px rgba(0, 0, 0, .05));
+        transparent, $primary-color,
+        #ebebeb,
+        none, 0 5px 10px rgba(0, 0, 0, .05));
 }
 
 .btn-outline-primary-2 {
-    @include button-outline-variant($primary-color, #fff,
-    $primary-color, $primary-color,
-    $primary-color,
-    none, none);
+    @include button-outline-variant(#008482, #fff,
+        #008482, #008482,
+        #008482,
+        none, none);
 }
 
 .btn-outline-light {
     @include button-outline-variant(#fff, $primary-color,
-    transparent, #fff, #fff
-    );
+        transparent, #fff, #fff);
 }
 
 .btn-outline-dark {
     @include button-outline-variant(#333333, $primary-color,
-    transparent, #d7d7d7,
-    #ebebeb,
-    none, 0 5px 10px rgba(0, 0, 0, .05));
+        transparent, #d7d7d7,
+        #ebebeb,
+        none, 0 5px 10px rgba(0, 0, 0, .05));
 }
 
 .btn-outline-dark-2 {
     @include button-outline-variant(#333333, $primary-color,
-    #fafafa, #ebebeb,
-    #ebebeb,
-    none, none);
+        #fafafa, #ebebeb,
+        #ebebeb,
+        none, none);
 }
 
 .btn-outline-dark-3 {
     @include button-outline-variant(#333333, $primary-color,
-    transparent, #d7d7d7,
-    $primary-color,
-    none, none);
+        transparent, #d7d7d7,
+        $primary-color,
+        none, none);
 }
 
 .btn-outline-darker {
     @include button-outline-variant(#333333, #fff,
-    $primary-color, #d7d7d7,
-    $primary-color,
-    none, none);
+        $primary-color, #d7d7d7,
+        $primary-color,
+        none, none);
 }
 
 .btn-outline-gray {
     @include button-outline-variant(#000, #fff,
-    $primary-color, #000,
-    $primary-color,
-    none, none);
+        $primary-color, #000,
+        $primary-color,
+        none, none);
 }
 
 .btn-outline-lightgray {
     @include button-outline-variant(#333333, $primary-color,
-    #f5f6f9, #ebebeb,
-    #ebebeb,
-    none, none);
+        #f5f6f9, #ebebeb,
+        #ebebeb,
+        none, none);
 }
 
 .btn-outline-white {
     @include button-outline-variant(#fff, #fff,
-    $primary-color, #fff,
-    $primary-color,
-    none, none);
+        $primary-color, #fff,
+        $primary-color,
+        none, none);
 }
 
 .btn-outline-white-2 {
     @include button-outline-variant(#fff, #fff,
-    $secondary-color, #fff,
-    $secondary-color,
-    none, none);
+        $secondary-color, #fff,
+        $secondary-color,
+        none, none);
 }
 
 .btn-outline-white-4 {
-    @include button-outline-variant(
-        #fff, $primary-color, 
-        #fff, #fff, 
+    @include button-outline-variant(#fff, $primary-color,
+        #fff, #fff,
         #fff,
-        none, none
-    );
+        none, none);
 }
 
 .newsletter-popup-container .input-group .btn {
+
     &:hover,
     &:focus {
         background-color: $primary-color;
@@ -316,7 +314,7 @@ a:focus {
 }
 
 .icon-box-icon {
-    color: $primary-color;
+    color: #008482;
 }
 
 .icon-box-circle {
@@ -346,7 +344,7 @@ a:focus {
 .page-header {
     h1 {
         span {
-            color: $primary-color;
+            color: #fff;
         }
     }
 }
@@ -498,11 +496,13 @@ a:focus {
 }
 
 .product-details-action .btn-product.btn-cart {
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         span {
             color: #fff;
         }
-    }  
+    }
 }
 
 .btn-product-icon {
@@ -648,6 +648,7 @@ a:focus {
 }
 
 .account a {
+
     &:hover,
     &:focus {
         color: $primary-color;
@@ -655,10 +656,12 @@ a:focus {
 }
 
 .wishlist a {
+
     &:hover,
     &:focus {
         color: $primary-color;
     }
+
     .wishlist-count {
         background-color: $primary-color;
     }
@@ -722,8 +725,8 @@ a:focus {
     }
 }
 
-.search-toggle:hover, 
-.search-toggle:focus, 
+.search-toggle:hover,
+.search-toggle:focus,
 .search-toggle.active {
     color: $primary-color;
 }
@@ -1015,6 +1018,7 @@ a:focus {
 /* Pages */
 .entry-video {
     a {
+
         &:hover,
         &:focus {
             &:after {
@@ -1026,6 +1030,7 @@ a:focus {
 
 .entry-meta {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1036,6 +1041,7 @@ a:focus {
 
 .entry-title {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1045,6 +1051,7 @@ a:focus {
 
 .entry-cats {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1054,6 +1061,7 @@ a:focus {
 }
 
 .read-more {
+
     &:hover,
     &:focus {
         box-shadow: 0 1px 0 0 $primary-color;
@@ -1062,6 +1070,7 @@ a:focus {
 
 .menu-cat {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1078,6 +1087,7 @@ a:focus {
 
 .widget-search {
     .btn {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1087,6 +1097,7 @@ a:focus {
 
 .widget-cats {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1096,6 +1107,7 @@ a:focus {
 
 .posts-list {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1105,6 +1117,7 @@ a:focus {
 
 .tagcloud {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1119,6 +1132,7 @@ a:focus {
 }
 
 .btn.btn-spinner {
+
     &:hover,
     &:focus {
         color: $primary-color;
@@ -1128,6 +1142,7 @@ a:focus {
 .table.table-summary {
     .summary-shipping-estimate {
         a {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1139,6 +1154,7 @@ a:focus {
 }
 
 .sidebar-toggler {
+
     &:hover,
     &:focus {
         color: $primary-color;
@@ -1165,6 +1181,7 @@ a:focus {
 
 .table.table-summary {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1191,9 +1208,10 @@ a:focus {
 }
 
 .paypal-link {
+
     &:hover,
     &:focus {
-        color: $primary-color !important;
+        color: $primary-color  !important;
     }
 }
 
@@ -1211,6 +1229,7 @@ a:focus {
 
 .contact-box {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1220,6 +1239,7 @@ a:focus {
 
 .contact-list {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1233,6 +1253,7 @@ a:focus {
 
 .store {
     a:not(.btn) {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1242,6 +1263,7 @@ a:focus {
 
 .nav-dashboard {
     .nav-link {
+
         &:hover,
         &:focus,
         &.active {
@@ -1253,6 +1275,7 @@ a:focus {
 .form-tab {
     .form-footer {
         a {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1263,6 +1286,7 @@ a:focus {
 
 .nav-filter {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1279,6 +1303,7 @@ a:focus {
 
 .portfolio-title {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1299,6 +1324,7 @@ a:focus {
 }
 
 .btn-product-gallery {
+
     &:hover,
     &:focus {
         background-color: $primary-color;
@@ -1312,8 +1338,7 @@ a:focus {
 }
 
 .product-pager-link {
-    &:hover
-    {
+    &:hover {
         color: $primary-color;
 
         span {
@@ -1323,7 +1348,9 @@ a:focus {
 }
 
 .breadcrumb-nav {
-    .product-pager-link:hover, .product-pager-link:focus {
+
+    .product-pager-link:hover,
+    .product-pager-link:focus {
         span {
             box-shadow: none;
         }
@@ -1333,6 +1360,7 @@ a:focus {
 .product-details {
     .product-cat {
         a {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1343,6 +1371,7 @@ a:focus {
 
     .product-size {
         a {
+
             &.active,
             &:hover,
             &:focus {
@@ -1354,6 +1383,7 @@ a:focus {
 }
 
 .size-guide {
+
     &:hover,
     &:focus {
         color: $primary-color;
@@ -1377,6 +1407,7 @@ a:focus {
 .product-details-tab {
     .nav.nav-pills {
         .nav-link {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1388,6 +1419,7 @@ a:focus {
 
 .product-desc-content {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1399,6 +1431,7 @@ a:focus {
 .review {
     h4 {
         a {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1409,6 +1442,7 @@ a:focus {
 
 .review-action {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1420,6 +1454,7 @@ a:focus {
 .product-details-extended {
     .nav.nav-pills {
         .nav-link {
+
             &.active,
             &:hover,
             &:focus {
@@ -1431,6 +1466,7 @@ a:focus {
 
 .editor-content {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1445,6 +1481,7 @@ a:focus {
 
 .entry-tags {
     a {
+
         &:hover,
         &:focus {
             color: $primary-color;
@@ -1455,6 +1492,7 @@ a:focus {
 .entry-author-details {
     h4 {
         a {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1464,6 +1502,7 @@ a:focus {
 }
 
 .author-link {
+
     &:hover,
     &:focus {
         color: $primary-color;
@@ -1485,6 +1524,7 @@ a:focus {
 }
 
 .comment-reply {
+
     &:hover,
     &:focus {
         color: $primary-color;
@@ -1495,6 +1535,7 @@ a:focus {
 .comment-user {
     h4 {
         a {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1506,6 +1547,7 @@ a:focus {
 .product-col {
     .product-title {
         a {
+
             &:hover,
             &:focus {
                 color: $primary-color;
@@ -1516,7 +1558,7 @@ a:focus {
 
 
 .quickView-content {
-    
+
     .btn-wishlist,
     .btn-compare {
         border: none;
@@ -1528,9 +1570,11 @@ a:focus {
         &:hover,
         &:focus {
             color: $primary-color;
+
             span {
                 color: $primary-color;
             }
+
             background-color: transparent;
         }
     }

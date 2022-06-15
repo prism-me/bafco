@@ -1,13 +1,13 @@
 /* Page Header */
 .page-header {
-	padding: 4.6rem 0 5rem;
+	padding: 22rem 0;
 	background-color: #ebebeb;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 
 	h1 {
-		color: $headings-text;
+		color: #fff;
 		font: normal 400 3.2rem/1.1 $font-family;
 		letter-spacing: -.025em;
 		margin-bottom: 0;
@@ -17,7 +17,7 @@
 			display: block;
 			color: $primary-color;
 			font-size: 1.6rem;
-			margin-top: .8rem;
+			margin-bottom: 3rem;
 		}
 	}
 
@@ -31,13 +31,19 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%,-50%);
+			transform: translate(-50%, -50%);
+
 			span {
 				font-size: 1.6rem;
 				margin-top: .4rem;
 				letter-spacing: 0;
 			}
 		}
+	}
+
+	.btn-outline-darker {
+		color: #fff;
+		margin-top: 3rem;
 	}
 }
 

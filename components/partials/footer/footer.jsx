@@ -100,10 +100,11 @@ function Footer() {
                                 <h4 className="widget-title">BAFCO</h4>
 
                                 <ul className="widget-list">
-                                    <li><ALink href="#">About Us</ALink></li>
+                                    <li><ALink href="/about/">About Us</ALink></li>
                                     <li><ALink href="#">Services</ALink></li>
                                     <li><ALink href="#">Innovations</ALink></li>
                                     <li><ALink href="#">Resources</ALink></li>
+                                    <li><ALink href="/contact/">Contact Us</ALink></li>
                                 </ul>
                             </div>
                         </div>
@@ -111,8 +112,38 @@ function Footer() {
                         <div className="col-sm-12 col-lg-3">
                             <div className="widget">
                                 <h4 className="widget-title">Visit our Showroom</h4>
-                                <p>Dubai
-                                    BAFCO Office & Showroom Ground Floor, Al Manara Building (near Al Safa Metro Station) Sheikh Zayed Road, Dubai, UAE</p>
+                                <ul className="contact-list">
+                                    <li>
+                                        <i className="icon-map-marker"></i>
+                                        <p><strong>Dubai</strong></p>BAFCO Office & Showroom Ground Floor, Al Manara Building (near Al Safa Metro Station) Sheikh Zayed Road, Dubai, UAE
+                                    </li>
+                                </ul>
+                                <ul className="contact-list contact-info">
+                                    <li>
+                                        <i className="icon-phone"></i>
+                                        <a href="tel:+9714 324 4424">+9714 324 4424</a>
+                                    </li>
+                                    <li>
+                                        <i className="icon-envelope"></i>
+                                        <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                                    </li>
+                                </ul>
+                                <ul className="contact-list">
+                                    <li>
+                                        <i className="icon-map-marker"></i>
+                                        <p><strong>Abu Dhabi</strong></p>Mezzanine Floor, Hareb Tower Sheikh, Airport Road – Old Rashid Bin Saeed Al Maktoum St. (2nd Street) Abu Dhabi, UAE
+                                    </li>
+                                </ul>
+                                <ul className="contact-list contact-info">
+                                    <li>
+                                        <i className="icon-phone"></i>
+                                        <a href="tel:+9714 324 4424">+9714 324 4424</a>
+                                    </li>
+                                    <li>
+                                        <i className="icon-envelope"></i>
+                                        <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

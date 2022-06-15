@@ -359,14 +359,24 @@ div.intro-slide {
 
 .deal {
 	display: block;
-	padding: 2rem;
+	padding: 4rem 2rem;
 	background-color: #fff;
 	margin-bottom: 2rem;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .deal-container {
 	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.deal-container .owl-simple.owl-light.owl-nav-inside .owl-dots .owl-dot.active span {
+	border-color: #686868;
+	background: #686868;
+}
+
+.deal-container .owl-simple .owl-dots .owl-dot span {
+	border: 0.1rem solid #686868;
 }
 
 .deal-content {
@@ -754,5 +764,111 @@ div.intro-slide {
 @include mq('sm', 'max') {
 	.product.product-11 .btn-product span {
 		font-size: 1.2rem;
+	}
+}
+
+.our-projects {
+	position: relative;
+	margin-bottom: 8rem;
+	margin-top: 6rem;
+}
+
+.our-projects:before {
+	position: absolute;
+	content: "";
+	bottom: -4rem;
+	left: 20rem;
+	right: 20rem;
+	height: 1.5px;
+	background-color: #aaa;
+}
+
+.our-projects:after {
+	position: absolute;
+	content: "";
+	top: -4.1rem;
+	left: 18rem;
+	right: 18rem;
+	height: 1.5px;
+	background-color: #aaa;
+}
+
+.our-projects {
+	.projects-list {
+		span.icon-box-icon {
+			color: #000;
+			font-size: 15px;
+			background: #fff;
+			padding: 2px;
+			border-radius: 50px;
+		}
+
+		.icon-index1 {
+			top: 10rem;
+			left: 28%;
+
+			.icon-index-detail-box {
+				position: relative;
+				top: -1rem;
+				right: -15rem;
+			}
+
+		}
+
+		.icon-index2 {
+			top: 25rem;
+			left: 3%;
+
+			.icon-index-detail-box {
+				position: relative;
+				top: -1rem;
+				right: -15rem;
+			}
+
+		}
+
+		li.icon-index3 {
+			top: 29rem;
+			right: 23%;
+
+			.icon-index-detail-box {
+				position: relative;
+				top: -1rem;
+				right: -15rem;
+			}
+		}
+
+		ul li {
+			position: absolute;
+
+			.icon-index-detail-box {
+				max-width: 300px;
+				background: rgba(0, 0, 0, 0.6);
+				backdrop-filter: blur(25px);
+				padding: 15px;
+				text-align: left;
+				display: none;
+
+				.row {
+					align-items: center;
+				}
+
+				h3 {
+					font-size: 16px;
+					color: #fff;
+					margin-bottom: 5px;
+				}
+
+				h6 {
+					color: #00AD7F;
+					font-size: 11px;
+				}
+
+				p {
+					color: #fff;
+					font-size: 10px;
+				}
+			}
+		}
 	}
 }

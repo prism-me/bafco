@@ -38,7 +38,7 @@ function BlogCollection ( props ) {
                 }
 
                 <div className="text-center mb-7 mt-2">
-                    <ALink href="/blog/classic" className="btn btn-outline-darker btn-more"><span>View more articles</span><i className="icon-long-arrow-right"></i></ALink>
+                    <ALink href="#" className="btn btn-outline-darker btn-more"><span>View more articles</span><i className="icon-long-arrow-right"></i></ALink>
                 </div>
             </div>
         </section>

@@ -15,7 +15,7 @@ import withApollo from '~/server/apollo';
 import { GET_HOME_DATA } from '~/server/queries';
 import { attrFilter } from '~/utils';
 
-import { homeData, introSlider, brandSlider, fadeInUpShorter, fadeInLeftShorter, fadeInRightShorter, fadeIn } from '~/utils/data';
+import { homeData, introSlider, brandSlider, dealSlider, fadeInUpShorter, fadeInLeftShorter, fadeInRightShorter, fadeIn } from '~/utils/data';
 
 function Home() {
     const { data, loading, error } = useQuery(GET_HOME_DATA);
@@ -297,10 +297,101 @@ function Home() {
                 </div>
             </div>
 
-            <div className="mb-3"></div>
+            {/* <div className="mb-3"></div> */}
+
+            <div className="our-projects text-center">
+                <div className="heading heading-center mb-3">
+                    <h2 className="title">Our Projects</h2>
+                    <h4>Furniture Overview</h4>
+                </div>
+                <Reveal keyframes={fadeInUpShorter} delay={200} duration={1000} triggerOnce>
+                    <div className="projects-list">
+                        <img src="images/home/unsplash_hE0nmTffKtM.png" alt="slide" />
+
+                        {/* <ul>
+                            <li className="icon-index1">
+                                <span className="icon-box-icon">
+                                    <i className="icon-plus"></i>
+                                </span>
+                                <div className="icon-index-detail-box">
+                                    <div className="row">
+                                        <div className="col-sm-6 col-lg-6">
+                                            <img src="images/home/projects/cubord.png" alt="" />
+                                        </div>
+                                        <div className="col-sm-6 col-lg-6">
+                                            <h3>Lorem Ipsum</h3>
+                                            <h6>Lorem Ipsum dolor sit</h6>
+                                            <p>Double-door wadrobe with built-in hanger. Showing an orderly space.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="icon-index2">
+                                <span className="icon-box-icon">
+                                    <i className="icon-plus"></i>
+                                </span>
+                                <div className="icon-index-detail-box">
+                                    <div className="row">
+                                        <div className="col-sm-6 col-lg-6">
+                                            <img src="images/home/projects/drower-image.png" alt="" />
+                                        </div>
+                                        <div className="col-sm-6 col-lg-6">
+                                            <h3>Lorem Ipsum</h3>
+                                            <h6>Lorem Ipsum dolor sit</h6>
+                                            <p>Double-door wadrobe with built-in hanger. Showing an orderly space.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="icon-index3">
+                                <span className="icon-box-icon">
+                                    <i className="icon-plus"></i>
+                                </span>
+                                <div className="icon-index-detail-box">
+                                    <div className="row">
+                                        <div className="col-sm-6 col-lg-6">
+                                            <img src="images/home/projects/drower-image.png" alt="" />
+                                        </div>
+                                        <div className="col-sm-6 col-lg-6">
+                                            <h3>Lorem Ipsum</h3>
+                                            <h6>Lorem Ipsum dolor sit</h6>
+                                            <p>Double-door wadrobe with built-in hanger. Showing an orderly space.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="icon-index4">
+                                <span className="icon-box-icon">
+                                    <i className="icon-plus"></i>
+                                </span>
+                            </li>
+                            <li className="icon-index5">
+                                <span className="icon-box-icon">
+                                    <i className="icon-plus"></i>
+                                </span>
+                            </li>
+                            <li className="icon-index6">
+                                <span className="icon-box-icon">
+                                    <i className="icon-plus"></i>
+                                </span>
+                            </li>
+                            <li className="icon-index7">
+                                <span className="icon-box-icon">
+                                    <i className="icon-plus"></i>
+                                </span>
+                            </li>
+                        </ul> */}
+                    </div>
+                </Reveal>
+            </div>
+
+            {/* <div className="mb-3"></div> */}
 
             <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
                 <TopCollection products={topProducts} loading={loading} />
+                <div className="text-center mb-7 mt-2">
+                    <ALink href="#" className="btn btn-outline-darker btn-more"><span>View more</span><i className="icon-long-arrow-right"></i></ALink>
+                </div>
             </Reveal>
 
             {/* <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
@@ -308,78 +399,225 @@ function Home() {
             </Reveal> */}
             <div className="deal-container pt-5 pb-3 mb-5">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-9">
-                            <div className="deal">
-                                <div className="deal-content">
-                                    <Reveal keyframes={fadeInLeftShorter} delay={200} duration={1000} triggerOnce>
-                                        <>
-                                            <h4>Limited Quantities</h4>
-                                            <h2>Deal of the Day</h2>
+                    <OwlCarousel adClass="owl-simple owl-light owl-nav-inside" options={dealSlider}>
+                        <div className="row">
+                            <div className="col-lg-9">
+                                <div className="deal">
+                                    <div className="deal-content">
+                                        <Reveal keyframes={fadeInLeftShorter} delay={200} duration={1000} triggerOnce>
+                                            <>
+                                                <h4>Limited Quantities</h4>
+                                                <h2>Deal of the Day</h2>
 
-                                            <h3 className="product-title">
-                                                <ALink href="#">Check Out</ALink>
-                                            </h3>
+                                                <h3 className="product-title">
+                                                    <ALink href="#">Check Out</ALink>
+                                                </h3>
 
-                                            <div className="product-price">
-                                                <span className="new-price">Dhs. 5000</span>
-                                                <span className="old-price">Was Dhs.7000</span>
-                                            </div>
+                                                <div className="product-price">
+                                                    <span className="new-price">Dhs. 5000</span>
+                                                    <span className="old-price">Was Dhs.7000</span>
+                                                </div>
 
-                                            <div className="deal-countdown">
-                                                <Countdown date={`2022-02-01T01:02:03`} renderer={rendererThree} />
-                                            </div>
+                                                <div className="deal-countdown">
+                                                    <Countdown date={`2022-02-01T01:02:03`} renderer={rendererThree} />
+                                                </div>
 
-                                            <ALink href="#" className="btn btn-primary">
-                                                <span>Shop Now</span><i className="icon-long-arrow-right"></i>
+                                                <ALink href="#" className="btn btn-primary">
+                                                    <span>Shop Now</span><i className="icon-long-arrow-right"></i>
+                                                </ALink>
+                                            </>
+                                        </Reveal>
+                                    </div>
+
+                                    <div className="deal-image position-relative">
+                                        <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
+                                            <ALink href="#">
+                                                <div className="lazy-overlay bg-white"></div>
+
+                                                <LazyLoadImage
+                                                    alt="deal-banner"
+                                                    src="images/home/deal/dealoftheday.png"
+                                                    threshold="300"
+                                                    effect="blur"
+                                                    width="100%"
+                                                    height={460}
+                                                />
                                             </ALink>
-                                        </>
-                                    </Reveal>
+                                        </Reveal>
+                                    </div>
                                 </div>
+                            </div>
 
-                                <div className="deal-image position-relative">
-                                    <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
-                                        <ALink href="#">
-                                            <div className="lazy-overlay bg-white"></div>
+                            <div className="col-lg-3">
+                                <div className="banner banner-overlay banner-overlay-light d-none d-lg-block h-100 pb-2">
+                                    <ALink href="#" className="h-100">
+                                        <div className="lazy-overlay"></div>
 
-                                            <LazyLoadImage
-                                                alt="deal-banner"
-                                                src="images/home/deal/dealoftheday.png"
-                                                threshold="300"
-                                                effect="blur"
-                                                width="100%"
-                                                height={460}
-                                            />
-                                        </ALink>
-                                    </Reveal>
+                                        <LazyLoadImage
+                                            alt="deal-banner"
+                                            src="images/home/banners/banner-5.jpg"
+                                            threshold="300"
+                                            effect="blur"
+                                            className="h-100"
+                                            width="100%"
+                                        />
+                                    </ALink>
+
+                                    <div className="banner-content banner-content-top">
+                                        <h4 className="banner-subtitle text-white">The Best Choice</h4>
+                                        <h3 className="banner-title text-white">Feigelali <br /> Best Sofa</h3>
+                                        {/* <div className="banner-text text-primary">$49.99</div> */}
+                                        <ALink href="/shop/sidebar/3cols" className="btn btn-outline-light banner-link">Shop Now<i className="icon-long-arrow-right"></i></ALink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-lg-9">
+                                <div className="deal">
+                                    <div className="deal-content">
+                                        <Reveal keyframes={fadeInLeftShorter} delay={200} duration={1000} triggerOnce>
+                                            <>
+                                                <h4>Limited Quantities</h4>
+                                                <h2>Deal of the Day</h2>
 
-                        <div className="col-lg-3">
-                            <div className="banner banner-overlay banner-overlay-light d-none d-lg-block h-100 pb-2">
-                                <ALink href="#" className="h-100">
-                                    <div className="lazy-overlay"></div>
+                                                <h3 className="product-title">
+                                                    <ALink href="#">Check Out</ALink>
+                                                </h3>
 
-                                    <LazyLoadImage
-                                        alt="deal-banner"
-                                        src="images/home/banners/banner-5.jpg"
-                                        threshold="300"
-                                        effect="blur"
-                                        className="h-100"
-                                        width="100%"
-                                    />
-                                </ALink>
+                                                <div className="product-price">
+                                                    <span className="new-price">Dhs. 5000</span>
+                                                    <span className="old-price">Was Dhs.7000</span>
+                                                </div>
 
-                                <div className="banner-content banner-content-top">
-                                    <h4 className="banner-subtitle text-white">The Best Choice</h4>
-                                    <h3 className="banner-title text-white">Indigo <br />Best Linen</h3>
-                                    <div className="banner-text text-primary">$49.99</div>
-                                    <ALink href="/shop/sidebar/3cols" className="btn btn-outline-light banner-link">Shop Now<i className="icon-long-arrow-right"></i></ALink>
+                                                <div className="deal-countdown">
+                                                    <Countdown date={`2022-02-01T01:02:03`} renderer={rendererThree} />
+                                                </div>
+
+                                                <ALink href="#" className="btn btn-primary">
+                                                    <span>Shop Now</span><i className="icon-long-arrow-right"></i>
+                                                </ALink>
+                                            </>
+                                        </Reveal>
+                                    </div>
+
+                                    <div className="deal-image position-relative">
+                                        <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
+                                            <ALink href="#">
+                                                <div className="lazy-overlay bg-white"></div>
+
+                                                <LazyLoadImage
+                                                    alt="deal-banner"
+                                                    src="images/home/deal/dealoftheday.png"
+                                                    threshold="300"
+                                                    effect="blur"
+                                                    width="100%"
+                                                    height={460}
+                                                />
+                                            </ALink>
+                                        </Reveal>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-3">
+                                <div className="banner banner-overlay banner-overlay-light d-none d-lg-block h-100 pb-2">
+                                    <ALink href="#" className="h-100">
+                                        <div className="lazy-overlay"></div>
+
+                                        <LazyLoadImage
+                                            alt="deal-banner"
+                                            src="images/home/banners/banner-5.jpg"
+                                            threshold="300"
+                                            effect="blur"
+                                            className="h-100"
+                                            width="100%"
+                                        />
+                                    </ALink>
+
+                                    <div className="banner-content banner-content-top">
+                                        <h4 className="banner-subtitle text-white">The Best Choice</h4>
+                                        <h3 className="banner-title text-white">Feigelali <br />Best Sofa</h3>
+                                        {/* <div className="banner-text text-primary">$49.99</div> */}
+                                        <ALink href="/shop/sidebar/3cols" className="btn btn-outline-light banner-link">Shop Now<i className="icon-long-arrow-right"></i></ALink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div className="row">
+                            <div className="col-lg-9">
+                                <div className="deal">
+                                    <div className="deal-content">
+                                        <Reveal keyframes={fadeInLeftShorter} delay={200} duration={1000} triggerOnce>
+                                            <>
+                                                <h4>Limited Quantities</h4>
+                                                <h2>Deal of the Day</h2>
+
+                                                <h3 className="product-title">
+                                                    <ALink href="#">Check Out</ALink>
+                                                </h3>
+
+                                                <div className="product-price">
+                                                    <span className="new-price">Dhs. 5000</span>
+                                                    <span className="old-price">Was Dhs.7000</span>
+                                                </div>
+
+                                                <div className="deal-countdown">
+                                                    <Countdown date={`2022-02-01T01:02:03`} renderer={rendererThree} />
+                                                </div>
+
+                                                <ALink href="#" className="btn btn-primary">
+                                                    <span>Shop Now</span><i className="icon-long-arrow-right"></i>
+                                                </ALink>
+                                            </>
+                                        </Reveal>
+                                    </div>
+
+                                    <div className="deal-image position-relative">
+                                        <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
+                                            <ALink href="#">
+                                                <div className="lazy-overlay bg-white"></div>
+
+                                                <LazyLoadImage
+                                                    alt="deal-banner"
+                                                    src="images/home/deal/dealoftheday.png"
+                                                    threshold="300"
+                                                    effect="blur"
+                                                    width="100%"
+                                                    height={460}
+                                                />
+                                            </ALink>
+                                        </Reveal>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-3">
+                                <div className="banner banner-overlay banner-overlay-light d-none d-lg-block h-100 pb-2">
+                                    <ALink href="#" className="h-100">
+                                        <div className="lazy-overlay"></div>
+
+                                        <LazyLoadImage
+                                            alt="deal-banner"
+                                            src="images/home/banners/banner-5.jpg"
+                                            threshold="300"
+                                            effect="blur"
+                                            className="h-100"
+                                            width="100%"
+                                        />
+                                    </ALink>
+
+                                    <div className="banner-content banner-content-top">
+                                        <h4 className="banner-subtitle text-white">The Best Choice</h4>
+                                        <h3 className="banner-title text-white">Feigelali <br />Best Sofa</h3>
+                                        {/* <div className="banner-text text-primary">$49.99</div> */}
+                                        <ALink href="/shop/sidebar/3cols" className="btn btn-outline-light banner-link">Shop Now<i className="icon-long-arrow-right"></i></ALink>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </OwlCarousel>
+
                 </div>
             </div>
 
@@ -387,7 +625,7 @@ function Home() {
 
             <div className="video-banner video-banner-bg bg-image text-center" style={{ backgroundImage: 'url(images/home/unsplash_aWf7mjwwJJo.png)' }}>
                 <div className="container">
-                    <Reveal keyframes={fadeInUpShorter} delay={200} duration={1000} triggerOnce>
+                    <Reveal keyframes={fadeInUpShorter} delay={200} duration={1000} triggerOnce style={{ backgroundImage: 'url(images/home/Component-26.png)' }}>
                         <>
                             <h3 className="video-banner-title h1 text-white">
                                 {/* <span>New Collection</span> */}

@@ -1,4 +1,4 @@
-/* Banners Videos */ 
+/* Banners Videos */
 .video-banner {
 	p {
 		max-width: 500px;
@@ -17,13 +17,19 @@
 .video-banner-bg {
 	padding-top: 8.5rem;
 	padding-bottom: 7.5rem;
+
+	.css-1pcoa0j {
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 24rem 0;
+	}
 }
 
 .video-banner-title {
 	letter-spacing: -.025em;
 	margin-bottom: 3.6rem;
 
-	> span {
+	>span {
 		display: block;
 		font-weight: 400;
 		font-size: 2rem;
@@ -64,7 +70,7 @@
 }
 
 .video-banner-poster {
-	.video-banner-title  {
+	.video-banner-title {
 		font-weight: 400;
 		margin-bottom: 1.6rem;
 
@@ -93,7 +99,7 @@
 .video-poster-title {
 	font-weight: 400;
 	margin-bottom: 3rem;
-  	letter-spacing: -.025em;
+	letter-spacing: -.025em;
 }
 
 .video-banner-box {
@@ -112,7 +118,7 @@
 	font-size: 1.5rem;
 	color: #777;
 
-	.video-banner-title  {
+	.video-banner-title {
 		font-weight: 400;
 		margin-bottom: 1.2rem;
 
@@ -122,6 +128,7 @@
 			margin-bottom: .6rem;
 		}
 	}
+
 	p:not(:last-child) {
 		margin-bottom: 2rem;
 	}
@@ -134,13 +141,13 @@
 	}
 
 	.video-banner-title {
-		> span {
+		>span {
 			font-size: 2.4rem;
 		}
 	}
 
 	.video-box-content {
-		.video-banner-title  {
+		.video-banner-title {
 			span {
 				font-size: 2rem;
 			}
@@ -157,14 +164,14 @@
 
 @include mq('lg') {
 	.video-banner-bg {
-		padding-top: 18.5rem;
-		padding-bottom: 17.5rem;
+		padding-top: 12.5rem;
+		padding-bottom: 12.5rem;
 	}
 
 	.video-box-content {
 		padding-left: 5rem;
 	}
-	
+
 	.video-fullheight {
 		height: 100vh;
 		max-height: 900px;
