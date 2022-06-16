@@ -126,7 +126,7 @@ function Home() {
             <div className="icon-boxes-container icon-boxes-separator">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6 col-lg-4">
+                        <div className="col-sm-4 col-lg-4">
                             <Reveal keyframes={fadeInRightShorter} delay={200} duration={1000} triggerOnce>
                                 <div className="icon-box icon-box-side">
                                     <span className="icon-box-icon">
@@ -141,7 +141,7 @@ function Home() {
                             </Reveal>
                         </div>
 
-                        <div className="col-sm-6 col-lg-4">
+                        <div className="col-sm-4 col-lg-4">
                             <Reveal keyframes={fadeInRightShorter} delay={200} duration={1000} triggerOnce>
                                 <div className="icon-box icon-box-side">
                                     <span className="icon-box-icon">
@@ -157,7 +157,7 @@ function Home() {
                             </Reveal>
                         </div>
 
-                        <div className="col-sm-6 col-lg-4">
+                        <div className="col-sm-4 col-lg-4">
                             <Reveal keyframes={fadeInRightShorter} delay={200} duration={1000} triggerOnce>
                                 <div className="icon-box icon-box-side">
                                     <span className="icon-box-icon">
@@ -631,7 +631,7 @@ function Home() {
                                 {/* <span>New Collection</span> */}
                                 <strong>Visit Our Showroom</strong>
                             </h3>
-                            <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" className="btn-video btn-iframe" onClick={openVideoModal}><i className="icon-play"></i></a>
+                            <a href="https://youtu.be/dp5zWq32CWo" className="btn-video btn-iframe" onClick={openVideoModal}><i className="icon-play"></i></a>
                         </>
                     </Reveal>
                 </div>

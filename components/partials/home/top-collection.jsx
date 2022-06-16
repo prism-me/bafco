@@ -35,13 +35,13 @@ function TopCollection(props) {
                             {
                                 (loading || products.length == 0) ?
                                     [1, 2, 3, 4, 5, 6, 7, 8].slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <div className="skel-pro"></div>
                                         </div>
                                     )
                                     :
                                     products.slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <ProductTwelve
                                                 product={item} />
                                         </div>
@@ -56,13 +56,13 @@ function TopCollection(props) {
                             {
                                 (loading || products.length == 0) ?
                                     [1, 2, 3, 4, 5, 6, 7, 8].slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <div className="skel-pro"></div>
                                         </div>
                                     )
                                     :
                                     catFilter(products, ['furniture']).slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <ProductTwelve
                                                 product={item} />
                                         </div>
@@ -77,13 +77,13 @@ function TopCollection(props) {
                             {
                                 (loading || products.length == 0) ?
                                     [1, 2, 3, 4, 5, 6, 7, 8].slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <div className="skel-pro"></div>
                                         </div>
                                     )
                                     :
                                     catFilter(products, ['decoration']).slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <ProductTwelve
                                                 product={item} />
                                         </div>
@@ -98,13 +98,13 @@ function TopCollection(props) {
                             {
                                 (loading || products.length == 0) ?
                                     [1, 2, 3, 4, 5, 6, 7, 8].slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <div className="skel-pro"></div>
                                         </div>
                                     )
                                     :
                                     catFilter(products, ['lighting']).slice(0, visible).map((item, index) =>
-                                        <div className="col-6 col-md-4 col-lg-3" key={index}>
+                                        <div className="col-6 col-md-6 col-lg-3" key={index}>
                                             <ProductTwelve
                                                 product={item} />
                                         </div>

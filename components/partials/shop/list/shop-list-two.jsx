@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductFive from '~/components/features/products/product-five';
+import ProductFive from '~/components/features/products/product-twelve';
 
 function ShopListThree ( props ) {
     const { products = [], loading } = props;

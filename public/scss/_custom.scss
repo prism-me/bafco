@@ -155,6 +155,10 @@ div.intro-slide {
 .intro-slider-container,
 div.intro-slide {
 	height: 460px;
+
+	@media (max-width: 767px) {
+		height: 225px;
+	}
 }
 
 .brands-border .brand {

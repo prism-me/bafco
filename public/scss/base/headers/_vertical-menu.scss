@@ -33,12 +33,12 @@
 		text-transform: uppercase;
 		padding: 1rem 1.9rem 1rem 2rem;
 		min-width: 270px;
-		transition: background .4s,  color .1s;
+		transition: background .4s, color .1s;
 
 		&:after {
 			content: '\f131';
 			font-family: 'molla';
-			border:none;
+			border: none;
 			font-size: 2.3rem;
 			line-height: 1;
 			margin-left: 6.7rem;
@@ -92,12 +92,15 @@
 
 	.dropdown-menu {
 		left: 0;
-		width: 100%;
+		width: 1168px;
 		margin: 0;
 		border-radius: 0;
 		border: none;
 		padding: 0;
-		box-shadow: 0 10px 30px rgba(0,0,0, .05);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-bottom: 2rem;
 	}
 
 	.dropdown-item {
@@ -133,7 +136,7 @@
 	}
 }
 
-.menu-vertical, 
+.menu-vertical,
 .menu-vertical ul {
 	margin: 0;
 	padding: 0;
@@ -152,8 +155,9 @@
 
 		&:hover,
 		&.show {
-			> ul,
-		 	> .megamenu  {
+
+			>ul,
+			>.megamenu {
 				display: block;
 			}
 		}
@@ -212,8 +216,8 @@
 			}
 		}
 
-		> ul,
-		div > ul {
+		>ul,
+		div>ul {
 			display: block;
 			position: static;
 			left: auto;
@@ -248,8 +252,8 @@
 	}
 
 	&.sf-arrows {
-		> li {
-			> .sf-with-ul {
+		>li {
+			>.sf-with-ul {
 				padding-right: 3rem;
 			}
 		}
@@ -272,7 +276,7 @@
 	}
 
 	li {
-		> a {
+		>a {
 			color: #000;
 			font-weight: 300;
 			font-size: 1.3rem;
@@ -292,31 +296,31 @@
 		}
 	}
 
-	> li {
+	>li {
 		width: 100%;
 
-		> a {
+		>a {
 			display: block;
 			color: #000;
 			font-weight: 300;
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 			line-height: 1.5;
 			letter-spacing: -.01em;
-			border: .1rem solid #ebebeb;
+			// border: .1rem solid #ebebeb;
 			border-top: none;
 			padding: .9rem 1.9rem;
 			width: 100%;
 		}
 
 		&.item-lead {
-			> a {
+			>a {
 				color: #000;
 				font-weight: 500;
 				background-color: #f9f9f9;
 			}
 		}
 
-		+ li {
+		+li {
 			margin-left: 0;
 		}
 	}
@@ -332,7 +336,7 @@
 		margin-bottom: .7rem;
 	}
 
-	ul + .menu-title {
+	ul+.menu-title {
 		margin-top: 1.2rem;
 	}
 
@@ -348,7 +352,7 @@
 		margin-top: 1.5rem;
 		padding-bottom: 1.5rem;
 
-		li > a {
+		li>a {
 			padding-left: 0;
 			padding-right: 0;
 		}
@@ -357,15 +361,15 @@
 	li:hover,
 	li.show,
 	li.active {
-		> a {
+		>a {
 			color: $primary-color;
 		}
 	}
 
-	> li:hover,
-	> li.show,
-	> li.active {
-		> a {
+	>li:hover,
+	>li.show,
+	>li.active {
+		>a {
 			color: $primary-color;
 		}
 	}

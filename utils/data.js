@@ -316,157 +316,131 @@ export const slideZoomIn = keyframes`{
 export const shopData = {
     "sizes": [
         {
-            size: 'Extra Small',
+            size: 'Highback',
             slug: 'XS'
         },
         {
-            size: 'Small',
+            size: 'Lounge',
             slug: 'S'
         },
         {
-            size: 'Medium',
+            size: 'Midback',
             slug: 'M'
         },
         {
-            size: 'Large',
+            size: 'Sofa',
             slug: 'L'
         },
         {
-            size: 'Extra Large',
+            size: 'Visitor',
             slug: 'XL'
         }
     ],
 
     "colors": [
         {
-            color: '#cc9966',
+            color: '#FFB951',
             color_name: 'Brown'
         },
         {
-            color: '#3399cc',
+            color: '#352692',
             color_name: 'Blue'
         },
         {
-            color: '#9966cc',
+            color: '#9E00FF',
             color_name: 'Purple'
         },
         {
-            color: '#333333',
+            color: '#E800DE',
             color_name: 'Black'
         },
         {
-            color: '#669933',
+            color: '#02A443',
             color_name: 'Green'
         },
         {
-            color: '#cc3333',
+            color: '#880B0B',
             color_name: 'Red'
         },
-        {
-            color: '#999999',
-            color_name: 'Grey'
-        }
     ],
 
     "brands": [
         {
-            brand: "Next",
+            brand: "Bafco",
             slug: "next"
         },
         {
-            brand: "River Island",
+            brand: "Comfort",
             slug: "river-island"
         },
         {
-            brand: "Geox",
+            brand: "Humanscale",
             slug: "geox"
         },
         {
-            brand: "New Balance",
+            brand: "Linear",
             slug: "nex-balance"
-        },
-        {
-            brand: "UGG",
-            slug: "ugg"
-        },
-        {
-            brand: "F&F",
-            slug: "f-and-f"
-        },
-        {
-            brand: "Nike",
-            slug: "nike"
         }
     ],
 
     "categories": [
         {
-            name: "Furniture",
+            name: "Executive Chairs",
             slug: "furniture",
             count: 8
         },
         {
-            name: "Coffee & Tables",
+            name: "Ergonomic Chairs",
             slug: "coffee-and-tables",
             count: 1
         },
         {
-            name: "Lighting",
+            name: "Conference Chairs",
             slug: "lighting",
             count: 3
         },
         {
-            name: "Decoration",
+            name: "Visitor Chairs",
             slug: "decoration",
             count: 5
         },
         {
-            name: "Electronics",
+            name: "Stools",
             slug: "electronics",
             count: 1
         },
         {
-            name: "Beds",
+            name: "Multi-Functional Chairs",
             slug: "beds",
             count: 2
         },
-        {
-            name: "Armchairs & Chaises",
-            slug: "armchairs-and-chaises",
-            count: 3
-        },
-        {
-            name: "Sofas & Sleeper Sofas",
-            slug: "sofas-and-sleeper-sofas",
-            count: 1
-        }
     ],
 
     "prices": [
         {
             min: '0',
             max: '25',
-            name: 'Under $25'
+            name: 'Under Dhs25'
         },
         {
             min: '25',
             max: '50',
-            name: '$25 to $50'
+            name: 'Dhs25 to Dhs50'
         },
         {
             min: '50',
             max: '100',
-            name: '$50 to $100'
+            name: 'Dhs50 to Dhs100'
         },
         {
             min: '100',
             max: '200',
-            name: '$100 to $200'
+            name: 'Dhs100 to Dhs200'
         },
         {
             min: '200',
             max: '9999',
-            name: '$200 & Above'
+            name: 'Dhs200 & Above'
         },
     ]
 }

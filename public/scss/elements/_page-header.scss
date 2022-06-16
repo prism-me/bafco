@@ -6,18 +6,33 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 
+	@media (max-width: 767px) {
+		padding: 3rem 0;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		padding: 7rem 0;
+	}
+
 	h1 {
 		color: #fff;
-		font: normal 400 3.2rem/1.1 $font-family;
+		// font: normal 400 3.2rem/1.1 $font-family;
 		letter-spacing: -.025em;
 		margin-bottom: 0;
 
+		@media (max-width: 767px) {
+			font-size: 23px !important;
+		}
 
 		span {
 			display: block;
 			color: $primary-color;
 			font-size: 1.6rem;
 			margin-bottom: 3rem;
+
+			@media (max-width: 767px) {
+				margin-bottom: 1.5rem;
+			}
 		}
 	}
 
@@ -44,6 +59,10 @@
 	.btn-outline-darker {
 		color: #fff;
 		margin-top: 3rem;
+
+		@media (max-width: 767px) {
+			margin-top: 1.5rem;
+		}
 	}
 }
 

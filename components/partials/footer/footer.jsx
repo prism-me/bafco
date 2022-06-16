@@ -29,7 +29,7 @@ function Footer() {
             <div className="footer-middle">
                 <div className={containerClass}>
                     <div className="row">
-                        <div className="col-sm-12 col-lg-3">
+                        <div className="col-sm-6 col-lg-3">
                             <div className="widget widget-about">
                                 <img src="images/bafco-logo.png" className="footer-logo" alt="Footer Logo" width="150" />
                                 <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
@@ -66,7 +66,7 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className="col-sm-4 col-lg-1">
+                        <div className="col-sm-2 col-lg-1">
                             <div className="widget">
                                 <h4 className="widget-title">SHOP</h4>
 
@@ -95,21 +95,21 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className="col-sm-4 col-lg-1">
+                        <div className="col-sm-2 col-lg-1">
                             <div className="widget">
                                 <h4 className="widget-title">BAFCO</h4>
 
                                 <ul className="widget-list">
-                                    <li><ALink href="/about/">About Us</ALink></li>
+                                    <li><ALink href="/pages/about/">About Us</ALink></li>
                                     <li><ALink href="#">Services</ALink></li>
                                     <li><ALink href="#">Innovations</ALink></li>
                                     <li><ALink href="#">Resources</ALink></li>
-                                    <li><ALink href="/contact/">Contact Us</ALink></li>
+                                    <li><ALink href="/pages/contact/">Contact Us</ALink></li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div className="col-sm-12 col-lg-3">
+                        <div className="col-sm-6 col-lg-3">
                             <div className="widget">
                                 <h4 className="widget-title">Visit our Showroom</h4>
                                 <ul className="contact-list">

@@ -22,12 +22,24 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		padding: 24rem 0;
+
+		@media (max-width: 767px) {
+			padding: 4rem 0;
+		}
+
+		@media (min-width: 768px) and (max-width: 1024px) {
+			padding: 12rem 0;
+		}
 	}
 }
 
 .video-banner-title {
 	letter-spacing: -.025em;
 	margin-bottom: 3.6rem;
+
+	@media (max-width: 767px) {
+		font-size: 23px;
+	}
 
 	>span {
 		display: block;

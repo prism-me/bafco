@@ -4,25 +4,25 @@ import ALink from '~/components/features/alink';
 
 function MainMenu() {
     const router = useRouter();
-    let path = router.asPath;
-    let query = router.query;
+    let path = router.query.type;
+    // let query = router.query;
 
-    function showAllDemos(e) {
-        let demoItems = document.querySelectorAll('.demo-item.hidden');
+    // function showAllDemos(e) {
+    //     let demoItems = document.querySelectorAll('.demo-item.hidden');
 
-        for (let i = 0; i < demoItems.length; i++) {
-            demoItems[i].classList.toggle('show');
-        }
+    //     for (let i = 0; i < demoItems.length; i++) {
+    //         demoItems[i].classList.toggle('show');
+    //     }
 
-        document.querySelector('.view-all-demos').classList.toggle('disabled-hidden');
-        e.preventDefault();
-    }
+    //     document.querySelector('.view-all-demos').classList.toggle('disabled-hidden');
+    //     e.preventDefault();
+    // }
 
     return (
         <nav className="main-nav">
             <ul className="menu sf-arrows">
-                <li className={`megamenu-container ${path === '/chairs' ? 'active' : ''}`} id="menu-home">
-                    <ALink href="/" className="sf-with-ul">Chairs</ALink>
+                <li className={`megamenu-container ${path === 'chairs' ? 'active' : ''}`} id="menu-home">
+                    <ALink href="/collections/chairs/" className="sf-with-ul">Chairs</ALink>
 
                     <div className="megamenu demo">
                         <div className="menu-col">
@@ -44,7 +44,7 @@ function MainMenu() {
 
                                 <div className="col-md-6">
                                     <div className="banner banner-overlay">
-                                        <ALink href="/product/centered/dark-yellow-lace-cut-out-swing-dress">
+                                        <ALink href="#">
                                             <img src="images/menu/hamburger-menu-image.png" alt="Banner" />
 
                                             <div className="banner-content banner-content-bottom">
@@ -412,8 +412,8 @@ function MainMenu() {
                         </div>
                     </div>
                 </li>
-                <li className={`megamenu-container ${path === '/desks' ? 'active' : ''}`} id="menu-home">
-                    <ALink href="#" className="sf-with-ul" scroll={false}>Desks</ALink>
+                <li className={`megamenu-container ${path === 'desks' ? 'active' : ''}`} id="menu-home">
+                    <ALink href="/collections/desks/" className="sf-with-ul" scroll={false}>Desks</ALink>
                     <div className="megamenu demo">
                         <div className="menu-col">
                             <div className="row no-gutters">
@@ -500,8 +500,8 @@ function MainMenu() {
                         </div>
                     </div> */}
                 </li>
-                <li className={`megamenu-container ${path === '/collaborative' ? 'active' : ''}`} id="menu-home">
-                    <ALink href="#" className="sf-with-ul" scroll={false}>Collaborative</ALink>
+                <li className={`megamenu-container ${path === 'collaborative' ? 'active' : ''}`} id="menu-home">
+                    <ALink href="/collections/collaborative/" className="sf-with-ul" scroll={false}>Collaborative</ALink>
                     <div className="megamenu demo">
                         <div className="menu-col">
                             <div className="row no-gutters">
@@ -535,8 +535,8 @@ function MainMenu() {
                     </div>
                 </li>
 
-                <li className={`megamenu-container ${path === '/storages' ? 'active' : ''}`} id="menu-home">
-                    <ALink href="#" className="sf-with-ul" scroll={false}>Storages</ALink>
+                <li className={`megamenu-container ${path === 'storages' ? 'active' : ''}`} id="menu-home">
+                    <ALink href="/collections/storages/" className="sf-with-ul" scroll={false}>Storages</ALink>
                     <div className="megamenu demo">
                         <div className="menu-col">
                             <div className="row no-gutters">
@@ -570,8 +570,8 @@ function MainMenu() {
                     </div>
                 </li>
 
-                <li className={`megamenu-container ${path === '/accessories' ? 'active' : ''}`} id="menu-home">
-                    <ALink href="#" className="sf-with-ul" scroll={false}>Accessories</ALink>
+                <li className={`megamenu-container ${path === 'accessories' ? 'active' : ''}`} id="menu-home">
+                    <ALink href="/collections/accessories/" className="sf-with-ul" scroll={false}>Accessories</ALink>
                     <div className="megamenu demo">
                         <div className="menu-col">
                             <div className="row no-gutters">
@@ -605,8 +605,8 @@ function MainMenu() {
                     </div>
                 </li>
 
-                <li className={`megamenu-container ${path === '/materials' ? 'active' : ''}`} id="menu-home">
-                    <ALink href="#" className="sf-with-ul" scroll={false}>Materials</ALink>
+                <li className={`megamenu-container ${path === 'materials' ? 'active' : ''}`} id="menu-home">
+                    <ALink href="/collections/materials/" className="sf-with-ul" scroll={false}>Materials</ALink>
                     <div className="megamenu demo">
                         <div className="menu-col">
                             <div className="row no-gutters">
